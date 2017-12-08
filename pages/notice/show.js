@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/notice/detail',
+      url: 'https://api.it120.cc/jifengdehao/notice/detail',
       data: {
         id: options.id
       },

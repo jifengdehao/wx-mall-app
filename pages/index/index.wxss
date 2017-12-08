@@ -42,7 +42,7 @@ swiper-item image {
 }
 
 .type-navbar{
-  white-space: nowrap;
+  white-space: nowrap; 
   height: 88rpx;
   width: 100%;
   background-color: #fff;

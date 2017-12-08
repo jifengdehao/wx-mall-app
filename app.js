@@ -37,7 +37,7 @@ App({
     wx.login({
       success: function (res) {
         wx.request({
-          url: 'https://api.it120.cc/'+ that.globalData.subDomain +'/user/wxapp/login',
+          url: 'https://api.it120.cc/jifengdehao/user/wxapp/login',
           data: {
             code: res.code
           },

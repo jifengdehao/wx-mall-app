@@ -3,9 +3,10 @@
 var app = getApp()
 Page({
   data: {
+    circular:true,
     indicatorDots: true,
     autoplay: true,
-    interval: 3000,
+    interval: 5000,
     duration: 1000,
     loadingHidden: false , // loading
     userInfo: {},
@@ -34,11 +35,13 @@ Page({
         swiperCurrent: e.detail.current  
     })  
   },
+  // 商品详情
   toDetailsTap:function(e){
     wx.navigateTo({
       url:"/pages/goods-details/index?id="+e.currentTarget.dataset.id
     })
   },
+  // banner详情
   tapBanner: function(e) {
     if (e.currentTarget.dataset.id != 0) {
       wx.navigateTo({
@@ -233,7 +236,7 @@ Page({
   getNotice: function () {
     var that = this;
     wx.request({
-      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/notice/list',
+      url: 'https://api.it120.cc/jifengdehao/notice/list',
       data: { pageSize :5},
       success: function (res) {
         if (res.data.code == 0) {
